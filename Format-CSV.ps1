@@ -1,13 +1,13 @@
 ﻿Function Format-CSV {
 $csv=""
-$header=""
+#$header=""
 $columns=""
 $outpath=""
-$folder = "c:\users\sbrennan\downloads\"
-$filename = Read-Host -Prompt "enter filename"
-$marketer = Read-host -Prompt "enter name of marketer"
+#$folder = "c:\users\sbrennan\downloads\"
+#$filename = Read-Host -Prompt "enter filename"
+#$marketer = Read-host -Prompt "enter name of marketer"
 #$columns=""
-$path = $folder + $filename
+#$path = $path + $filename
 $outpath= "\\wccldfps\sbrennan\act lists\"+$marketer +"\"+$filename
 $mistheader="person_id,salutation,firstname,mi,lastname,title,company,address1,address2,address3,city,state,zip,country,keycode,phone,d_phone,fax,d_fax,p_fax,email,department,dear"
 $clickheader="MEMBERID_,DATEJOINED_,EMAILADDR_,FIRST_NAME_,LAST_NAME_,ADDRESS_1_,ADDRESS_2_,STATE_PROVINCE_,POSTAL_CODE_,PHONE_OFFICE_,COMPANY_NAME_,CITY,TITLE,FAX_,OPTINDATE_,CUSTID_,IPADDRESS_,GROUPNAME_,TIMECLICKED_,URLTEXT_,PRETTYNAME_,EMAILADDR_,MEMID,FULLNAME_"
@@ -135,4 +135,7 @@ $header=(get-content $path |Select-Object -First 1)
 #fax
 #contact
 #personal email
+
+Return 
 }
+Format-csv

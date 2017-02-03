@@ -1,9 +1,10 @@
-﻿$excluded = 'Times Clicked','Keycode','Salutation','TAG','Links Clicked','link','click count','unsubscribe from all','Opened Count','Unsubscribe from All '#,'mi','dear','department','fax','p_fax','person_id','phone','d_phone','d_fax'
+﻿
+$excluded = 'Times Clicked','Keycode','Salutation','TAG','Links Clicked','link','click count','unsubscribe from all','Opened Count','Unsubscribe from All '#,'mi','dear','department','fax','p_fax','person_id','phone','d_phone','d_fax'
 
-$folder = "c:\users\sbrennan\downloads\"
-$filename = Read-Host -Prompt "enter filename"
-$marketer = Read-host -Prompt "enter name of marketer"
-$path = $folder + $filename
+#$folder = "c:\users\sbrennan\downloads\"
+#$filename = Read-Host -Prompt "enter filename"
+#$marketer = Read-host -Prompt "enter name of marketer"
+#$path = $folder + $filename
 $outpath= "\\wccldfps\sbrennan\act lists\"+$marketer +"\"+$filename
 
 
@@ -24,3 +25,4 @@ Remove-Variable firstname
 Remove-Variable lastname
 
 ii $outpath
+
