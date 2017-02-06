@@ -1,13 +1,13 @@
 ﻿Function Format-BR ($excelFileName)
 {
     $date = get-date (get-date).AddDays(-1) -UFormat "%m%d"
-    $excelFile = "C:\users\sbrennan\downloads\" + $excelFileName + ".xls"
+    $excelFile = "$excelFilename" #"C:\users\sbrennan\downloads\" + $excelFileName + ".xls"
     $excel = New-Object -ComObject Excel.Application
     $workbook = $excel.workbooks.open($excelFile)
     $excel.visible = $true # switch to make excel visible 
     #$excel.Visible = $false # switch to make excel invisible
     $excel.DisplayAlerts = $false
-    $worksheet = $workbook.sheets.Item($excelFilename)
+    $worksheet = $workbook.sheets.Item($Filename.TrimEnd(".csv"))
     $worksheet.Range("A1:P1").cells.delete()
     $lastrow = $worksheet.usedRange.Rows.Count
     $worksheet.Range("A1:A1").cells="Home Address 1"
@@ -23,3 +23,4 @@
     #$excel.quit() # we don't want to actually quit out of excel yet becuase we need to check for duplicates and note them down. Eventually it would be nice to solve this
     
 }
+Format-BR -excelFileName $path
