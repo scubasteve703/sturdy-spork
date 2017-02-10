@@ -21,6 +21,6 @@
     $worksheet.Range("A2:R"+$lastrow).Sort($worksheet.Range("c2:C" + $lastrow)) #this sorts correctly, almost had it right the first time!
     $worksheet.SaveAs("\\wccldfps\sbrennan\act lists\Brochure Requests\WCR BR"+" "+$date+".csv", 6)
     #$excel.quit() # we don't want to actually quit out of excel yet becuase we need to check for duplicates and note them down. Eventually it would be nice to solve this
-    
+   
 }
 Format-BR -excelFileName $path
