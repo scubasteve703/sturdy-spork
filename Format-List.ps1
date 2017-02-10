@@ -32,7 +32,7 @@ if ($header -eq "person_id,salutation,firstname,mi,lastname,title,company,addres
                         Invoke-Expression -Command .\Format-Clickthroughs.ps1
                         }
 
-                        Elseif ($header -eq "Link,Email,Opened Count,First Name,Last Name,state,company,city,phone,country,title,keycode,Salutation,TAG,Unsubscribe from All")
+                        Elseif ($header -eq "Link,Email,Opened Count,First Name,Last Name,state,company,city,phone,country,title,keycode,Salutation,TAG,Unsubscribe from All ")
                             {
                                 Invoke-Expression -Command .\Format-Clickthroughs.ps1
                                 }
